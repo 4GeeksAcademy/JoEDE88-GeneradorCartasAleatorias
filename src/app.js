@@ -40,8 +40,32 @@ let card = document.getElementById("randomCard");
 
 card.addEventListener("click", cartaAleatoria);
 
-let button = document.getElementById("btn");
+let boton = document.getElementById("btn");
+boton.addEventListener("click", cartaAleatoria);
 
-button.addEventListener("click", cartaAleatoria);
+const cincoSegundos = 5000;
+setInterval(cartaAleatoria, cincoSegundos);
 
-setInterval(cartaAleatoria, 1000);
+let widthInput = document.getElementById("inputWidth");
+let heightInput = document.getElementById("inputHeight");
+
+function adjustWidth(size) {
+  card.style.width = `${size}px`;
+}
+function adjustHeight(size) {
+  card.style.height = `${size}px`;
+}
+
+widthInput.addEventListener("keypress", function(e) {
+  if (e.key === "Enter" && e.target.value) {
+    adjustWidth(e.target.value);
+    e.target.value = "";
+  }
+});
+
+heightInput.addEventListener("keypress", function(e) {
+  if (e.key === "Enter" && e.target.value) {
+    adjustHeight(e.target.value);
+    e.target.value = "";
+  }
+});
