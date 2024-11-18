@@ -4,7 +4,7 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-// import ".assets/img/King.png";
+import "./assets/img/King.png";
 
 let suit = document.getElementById("idPica");
 let numberOrLetter = document.getElementById("numeroOLetra");
@@ -27,9 +27,9 @@ function cartaAleatoria() {
     suit.style.color = "black";
     reversedSuit.style.color = "black";
   }
-  /*   if (randomNumber === "K") {
+  if (randomNumber === "K") {
     numberOrLetter.innerHTML = `<img id="myImg" src="King.png"></img>`;
-  } */
+  }
 }
 
 window.onload = function() {
@@ -43,3 +43,5 @@ card.addEventListener("click", cartaAleatoria);
 let button = document.getElementById("btn");
 
 button.addEventListener("click", cartaAleatoria);
+
+setInterval(cartaAleatoria, 1000);
