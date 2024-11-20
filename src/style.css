@@ -2,15 +2,18 @@
 
 * {
   margin: 0;
-  height: 100%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  background-color: rgb(8, 103, 8);
 }
 
 .container-fluid {
-  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .carta {
@@ -19,27 +22,43 @@
   width: 400px;
   height: 650px;
   border-radius: 10px;
-  font-size: 100px;
-  display: flex;
+  border: 1px black solid;
+  position: relative;
+}
+
+.carta:hover {
+  background-color: RGB(231, 231, 231, 255);
+}
+
+.picas {
+  font-size: 80px;
 }
 
 .pica {
-  width: 33%;
+  position: absolute;
+  top: -10px;
+  left: 15px;
 }
 .numero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  font-size: 150px;
+  width: 60%;
   border: black 2px solid;
-  height: 63%;
-  margin-top: 118px;
+  border-radius: 10px;
+  height: 65%;
 }
 
 .reversed {
   transform: scaleY(-1);
-  justify-content: baseline;
-  width: 33%;
+  position: absolute;
+  bottom: -10px;
+  right: 15px;
 }
 
 .footer {
@@ -55,7 +74,6 @@ button {
   position: absolute;
   left: 20px;
   padding: 5px;
-  height: 50px;
   border-radius: 10px;
   background-color: salmon;
   transition: background-color 1.5s, color 1.5s;
@@ -68,6 +86,9 @@ button:hover {
 .cajas {
   height: 30%;
   border-radius: 10px;
+  position: fixed;
+  left: 80px;
+  height: 100px;
 }
 
 input {
@@ -79,4 +100,5 @@ input {
 #myImg {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }

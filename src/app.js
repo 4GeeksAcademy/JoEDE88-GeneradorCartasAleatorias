@@ -43,8 +43,8 @@ card.addEventListener("click", cartaAleatoria);
 let boton = document.getElementById("btn");
 boton.addEventListener("click", cartaAleatoria);
 
-const cincoSegundos = 5000;
-setInterval(cartaAleatoria, cincoSegundos);
+/* const cincoSegundos = 5000;
+setInterval(cartaAleatoria, cincoSegundos); */
 
 let widthInput = document.getElementById("inputWidth");
 let heightInput = document.getElementById("inputHeight");
