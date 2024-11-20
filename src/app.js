@@ -5,6 +5,8 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 import "./assets/img/King.png";
+import "./assets/img/queen.png";
+import "./assets/img/jack.png";
 
 let suit = document.getElementById("idPica");
 let numberOrLetter = document.getElementById("numeroOLetra");
@@ -30,6 +32,12 @@ function cartaAleatoria() {
   if (randomNumber === "K") {
     numberOrLetter.innerHTML = `<img id="myImg" src="King.png"></img>`;
   }
+  if (randomNumber === "Q") {
+    numberOrLetter.innerHTML = `<img id="myImg" src="queen.png"></img>`;
+  }
+  if (randomNumber === "J") {
+    numberOrLetter.innerHTML = `<img id="myImg" src="jack.png"></img>`;
+  }
 }
 
 window.onload = function() {
@@ -43,8 +51,8 @@ card.addEventListener("click", cartaAleatoria);
 let boton = document.getElementById("btn");
 boton.addEventListener("click", cartaAleatoria);
 
-/* const cincoSegundos = 5000;
-setInterval(cartaAleatoria, cincoSegundos); */
+const tresSegundos = 3000;
+setInterval(cartaAleatoria, tresSegundos);
 
 let widthInput = document.getElementById("inputWidth");
 let heightInput = document.getElementById("inputHeight");
